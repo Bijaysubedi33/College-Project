@@ -59,10 +59,10 @@ def login():
 
     return render_template('login.html', title='Login',form=form)
 
-@app.route("/dashboard",methods = ['GET','POST'])
+@app.route("/user",methods = ['GET','POST'])
 def user():
     form = Registration_Form()
-    return render_template('user.html',user = form.username.data)
+    return render_template('user.html',user = form.username.data,posts=posts)
 
 @app.route("/logout")
 def logout():
